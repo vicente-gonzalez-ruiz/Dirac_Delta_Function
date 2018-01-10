@@ -1,0 +1,12 @@
+set terminal fig textspecial color
+set output "funcion_muestreo.fig"
+set samples 200
+#set nokey
+#set key right title "$A\\tau\\textrm{Sinc}(w\\frac{\\tau}{2}$)
+set xrange[-pi/2:pi/2]
+set xtics ("$-\\frac{6\\pi}{\\tau}$" -1.5, "$-\\frac{4\\pi}{\\tau}$" -1.0,"$-\\frac{2\\pi}{\\tau}$" -0.5, "$0$" 0, "$\\frac{2\\pi}{\\tau}$" 0.5, "$\\frac{4\\pi}{\\tau}$" 1.0, "$\\frac{6\\pi}{\\tau}$" 1.5)
+set ytics ("$A\\tau$" 1.05)
+set yrange [-0.25:1.2]
+set xlabel "$w$"
+#set ylabel "$F(w)$"
+plot (sin(2*pi*x)/x)/6 title "$A\\tau\\textrm{Sinc}(w\\frac{\\tau}{2})$", 1.05 title "", 0 title ""
