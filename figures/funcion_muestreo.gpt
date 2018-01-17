@@ -9,4 +9,4 @@ set ytics ("$A\\tau$" 1.05)
 set yrange [-0.25:1.2]
 set xlabel "$\\omega$"
 #set ylabel "$F(\\omega)$"
-plot (sin(2*pi*x)/x)/6 title "$A\\tau\\textrm{Sinc}(w\\frac{\\tau}{2})$", 1.05 title "", 0 title ""
+plot (sin(2*pi*x)/x)/6 title "$A\\tau\\textrm{Sinc}(\\omega\\frac{\\tau}{2})$", 1.05 title "", 0 title ""
