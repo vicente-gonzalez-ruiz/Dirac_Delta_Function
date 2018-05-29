@@ -45,8 +45,8 @@
 %      \sum_{n=1}^\infty b_n \sin(n\omega_0t),
 %    \end{array}
   where $$t_0<t<t_0+\frac{2\pi}{\omega_0},$$ $\omega_0$ is the fundamental
-  frequency component expressed in radians per second and $a_0$, $a_n$
-  and $b_n$ are the coefficients of the Fourier trigonometric series.
+  frequency component expressed in radians per second and $a_0$, $\{a_n\}$
+  and $\{b_n\}$ are the coefficients of the Fourier trigonometric series.
 \item Note that this summation can only reproduce the behavior of a
   function (or a signal) in an interval (of time) equal to
   \begin{displaymath}
@@ -59,9 +59,11 @@
 %\newpage
 \subsection{Fourier coefficients of the trigonometric series}
 \begin{itemize}
-\item The coefficients of the Fourier trigonometric series express the
-  amount of each of the ``pure sinusoidal signals'' that must be added
-  together to obtain the analyzed signal.
+\item The coefficients of the Fourier trigonometric series quantify
+  the correlation between the function $f(t)$ and the corresponding
+  basis functions (the amount of each of the ``pure sinusoidal
+  signals'' that must be added together to obtain the analyzed
+  signal).
 \item Mathematically, they are calculated as the proportion that
   exists between the energy of the correlation of the signal with the
   respective sinusoidal function (\ref{eq:an}) and the energy of that
@@ -81,23 +83,23 @@
       {\color{violeta} \int_{t_0}^{t_0+T}\sin^2(n\omega_0t)dt}
     } \label{eq:bn} \tag{bn}
   \end{equation}
-  being
-  $$
+  where
+  \begin{equation*}
   T=\frac{2\pi}{\omega_0}.
-  $$
-\item For $n=0$
+  \end{equation*}
+\item For $n=0$, coefficient
   \begin{equation*}
     a_0 = \frac{1}{T}\int_{t_0}^{t_0+T} f(t)dt,
   \end{equation*}
-  which, as we can see, is the average value of $f(t)$ in the interval
-  $(t_0, t_0+T)$. $a_0$ is refered as the direct current component
-  or DC (Direct Current) of $f(t)$ in such interval.
+  is the average value of $f(t)$ in the interval $(t_0, t_0+T)$. $a_0$
+  is refered as the direct current component or DC (Direct Current) of
+  $f(t)$ in such interval.
 
 \item On the other hand, knowing that
-  $$
-  \int_{t_0}^{t_0+T} \cos^2(n\omega_0t)dt = \int_{t_0}^{t_0+T}
-  \sin^2(n\omega_0t)dt = \frac{T}{2},
-  $$
+  \begin{equation*}
+    \int_{t_0}^{t_0+T} \cos^2(n\omega_0t)dt = \int_{t_0}^{t_0+T}
+    \sin^2(n\omega_0t)dt = \frac{T}{2},
+  \end{equation*}
   the Eqs. \ref{eq:an} and \ref{eq:bn} can be also written as
   \begin{equation}
     a_n = \frac{2}{T}\int_{t_0}^{t_0+T} f(t)\cos(n\omega_0t)dt
@@ -132,8 +134,8 @@
 
 \section{The Fourier exponential series}
 \begin{itemize}
-\item It is a more compact representation of Eq. \ref{eq:stf}, written
-  as a function of the complex exponential.
+\item Fourier exponential series is a more compact representation of
+  Eq. \ref{eq:stf}, written as a function of the complex exponential.
 \item Be the definitions
 \begin{equation}
 \begin{array}{l}
@@ -276,8 +278,7 @@ Finally, joining the two summations and the term that was left out we have to
   \end{equation}
 \end{itemize}
 
-\section{Relaci\'on entre las series exponencial y trigonom\'etrica de
-  Fourier}
+\section{Relation between the Fourier exponential and trigonometric series}
 \begin{itemize}
 \item Ambas series son dos formas diferentes de expresar la misma
   serie. De hecho se pueden obtener los coeficientes de una de las
@@ -615,7 +616,7 @@ Finally, joining the two summations and the term that was left out we have to
    = A\tau\mathrm{Sinc}(\omega\frac{\tau}{2}).
   \end{equation*}
   
-\item [] The function
+\item [] The SINne Cardinal function
   \begin{equation*}
     \mathrm{Sinc}(x) = \frac{\sin(x)}{x}
   \end{equation*}
@@ -644,13 +645,13 @@ then the spectrum tends to become a constant function.
 \item The unit impulse function \cite{Lathi} plays a determining role
   in the theory of signal communication and in particular in the
   sampling theorem. It is defined as:
-  \fig{250}{delta.png}
+  \fig{200}{delta.png}
   and it fulfills that
   \begin{equation}
     \left\{
       \begin{array}{ll}
         \displaystyle\int_{-\infty}^\infty\delta(t)dt=1 & \text{si $t=0$}\\
-        0 & \text{resto,}
+        0 & \text{otherwise,}
       \end{array}
     \right.
     \tag{delta\_1}
@@ -671,9 +672,11 @@ then the spectrum tends to become a constant function.
     \label{eq:delta_2}
   \end{equation}
   and in the same way, that
-  \begin{equation*}
+  \begin{equation}
     \int_{-\infty}^\infty\delta(t-t_0)f(t)dt = f(t_0).
-  \end{equation*}
+    \tag{delta\_3}
+    \label{eq:delta_3}
+  \end{equation}
 \item By virtue of these definitions we could say that the unit
   impulse function is able to calculate the value of a function at the
   point where it is defined (the delta).
@@ -696,8 +699,8 @@ then the spectrum tends to become a constant function.
     \begin{equation}
       \delta(t) =
       \lim_{\tau\rightarrow\infty}\frac{\tau}{\pi}\mathrm{Sinc}(\tau
-      t).  \tag{delta\_muestreo}
-      \label{eq:delta_muestreo}
+      t).  \tag{delta\_sinc}
+      \label{eq:delta_sinc}
     \end{equation}
     %N\'otese que el area que hay entre la curva de la funci\'on
     %muestreo y el eje del tiempo $t$ es $2\pi$.  Note that when
@@ -722,7 +725,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
 \begin{equation*}
   \begin{array}{rcl}
     {\cal F}[\delta(t)] & = & \displaystyle\int_{-\infty}^\infty\delta(t)e^{-j\omega t}dt\\\\
-    \multicolumn{3}{l}{\text{(Aplicando \ref{eq:delta_2} y \ref{eq:delta_1})}}\\\\
+    \multicolumn{3}{l}{\text{(Using \ref{eq:delta_2} and \ref{eq:delta_1})}}\\\\
     & = & \underbrace{e^{-j\omega_0}}_{1}\underbrace{\displaystyle\int_{-\infty}^\infty\delta(t)dt}_{1} = 1.
   \end{array}
 \end{equation*}
@@ -761,15 +764,14 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
     {\cal F}[1] = \displaystyle2\pi\lim_{\tau\rightarrow\infty}
     \frac{\tau}{2\pi}\text{Sinc}(\frac{\tau}{2}\omega)
   \end{equation*}
-  Applying Eq. \ref{eq:delta_muestreo} for $\frac{\tau}{2}$.
+  Applying Eq. \ref{eq:delta_sinc} for $\frac{\tau}{2}$.
   \begin{equation*}
     {\cal F}[1] =2\pi\delta(\omega).
   \end{equation*}
   
 \end{itemize}
 
-\section{Transformada de Fourier de la funci\'on exponencial compleja}
-%\section{Fourier transform of the complex exponential function}
+\section{Fourier transform of the complex exponential function}
 \begin{itemize}
 \item The Fourier transform of the complex exponential function of
   frequency $\omega_0$ is a unit impulse of energy $2\pi$ in $\omega_0$,
@@ -782,7 +784,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
   \fig{200}{TFexpo.png}
 \end{itemize}
 
-\subsection*{Proof}
+\subsection*{Proof 1}
 \noindent By definition,
 \begin{equation*}
   {\cal F}[e^{j\omega_0t}] = \int_{-\infty}^\infty e^{j\omega_0t}e^{-j\omega t} dt =
@@ -790,6 +792,37 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
 \end{equation*}
 Taking into cosideration Eq. \ref{eq:TFfc} and substituting 
 $\omega=\omega-\omega_0$ we get that
+\begin{equation*}
+  {\cal F}[e^{j\omega_0t}] = 2\pi\delta(\omega-\omega_0).
+\end{equation*}
+
+\subsection*{Proof 2}
+By definition of Fourier transform of signal $s(t)$ (see Eq.~\ref{eq:Ft}):
+\begin{equation}
+  S(\omega_0) = \int_{-\infty}^\infty s(t)e^{-j\omega_0t}dt,
+\end{equation}
+and by definition of inverse Fourier transform of $S(\omega)$ (see
+Eq.~\ref{eq:iFt}):
+\begin{equation}
+  s(t) = \frac{1}{2\pi} \int_{-\infty}^\infty S(\omega)e^{j\omega t}d\omega.
+\end{equation}
+Substituting the second equation in the first one, we get that:
+\begin{equation}
+  S(\omega_0) = \int_{-\infty}^\infty \big( \frac{1}{2\pi} \int_{-\infty}^\infty S(\omega)e^{j\omega t}d\omega \big) e^{-j\omega_0t}dt = \int_{-\infty}^\infty S(\omega) \big( \frac{1}{2\pi} \int_{-\infty}^\infty e^{j\omega t}e^{-j\omega_0 t}dt\big) d\omega.
+\end{equation}
+On the other hand, we know (see Eq.~\ref{eq:delta_3}) that:
+\begin{equation}
+  S(\omega_0) = \int_{-\infty}^\infty S(\omega)\delta(\omega-\omega_0)d\omega.
+\end{equation}
+Therefore, comparing both expressions, we get that:
+\begin{equation}
+  \frac{1}{2\pi} \int_{-\infty}^\infty e^{j\omega t}e^{-j\omega_0t}dt = \delta(\omega-\omega_0),
+\end{equation}
+or that:
+\begin{equation}
+  \int_{-\infty}^\infty e^{j\omega t}e^{-\omega_0 t}dt = 2\pi\delta(\omega-\omega_0),
+\end{equation}
+The first part of this equation is the Fourier Transform of ${\cal F}(e^{j\omega_0 t})$. Therefore:
 \begin{equation*}
   {\cal F}[e^{j\omega_0t}] = 2\pi\delta(\omega-\omega_0).
 \end{equation*}
@@ -809,7 +842,9 @@ $\omega=\omega-\omega_0$ we get that
 \end{itemize}
 
 \subsection*{Proof}
-\noindent As we know,
+\noindent As we know (see
+\ref{https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Relation_to_the_complex_exponential_function}{see
+  tist of trigonometric identities}),
 \begin{equation*}
   \sin(\omega_0t) = \frac{\displaystyle e^{j\omega_0t}-e^{-j\omega_0t}}{\displaystyle 2j}.
 \end{equation*}
@@ -1029,7 +1064,7 @@ $$
   \end{array}
 \end{equation*}
 
-\section{Functions convolution}
+\section{Convolution betweem two functions}
 \begin{itemize}
 \item Be $f_1(t)$ and $f_2(t)$ two functions. Their convolution
   $f_1(t)*f_2(t)$ is defined as~\cite{Gonzalez}
