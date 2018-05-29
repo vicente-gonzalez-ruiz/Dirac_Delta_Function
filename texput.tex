@@ -574,17 +574,7 @@ Finally, joining the two summations and the term that was left out we have to
   %  \end{array}
   %\right.
   %$$
-  \ifx\HCode\Undfef
-  \begin{center}
-    \includegraphics[width=8cm]{cuadrada}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="250" src="data/cuadrada.png" />
-    </div>
-  }
-  \fi
+  \fig{200}{cuadrada.png}
   Determine its Fuorier spectrum.
 %\item [] Antes de aplicar la Ecuaci\'on \ref{eq:Fw} que calcula la
 %  transformada (directa) de Fourier, vamos a realizar un cambio de
@@ -643,17 +633,7 @@ Finally, joining the two summations and the term that was left out we have to
   
 \end{itemize}
 
-\ifx\HCode\Undfef
-\begin{center}
-  \includegraphics[width=0.9\textwidth]{funcion_muestreo_small}
-\end{center}
-\else
-\HCode{
-  <div style="text-align:center;">
-  <img height="350" src="data/funcion_muestreo_small.png" />
-  </div>
-}
-\fi
+\fig{350}{funcion_muestreo_small.png}
 
 \noindent Notice that if if $\tau\rightarrow \infty$ then the spectrum
 tends to become an impulse at $\omega=0$ and if $\tau\rightarrow 0$
@@ -664,18 +644,7 @@ then the spectrum tends to become a constant function.
 \item The unit impulse function \cite{Lathi} plays a determining role
   in the theory of signal communication and in particular in the
   sampling theorem. It is defined as:
-  \ifx\HCode\Undfef
-  \begin{center}
-    \includegraphics[width=8cm]{delta}
-    %\texfigure{!}{!}{delta}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="250" src="data/delta.png" />
-    </div>
-  }
-  \fi
+  \fig{250}{delta.png}
   and it fulfills that
   \begin{equation}
     \left\{
@@ -718,18 +687,7 @@ then the spectrum tends to become a constant function.
   generate and that is obtained in the limit of other functions:
   \begin{enumerate}
   \item From a rectangular function:
-    \ifx\HCode\Undfef
-    \begin{center}
-      %\texfigure{!}{!}{limite}
-      \includegraphics[width=8cm]{limite}
-    \end{center}
-    \else
-    \HCode{
-      <div style="text-align:center;">
-      <img height="250" src="data/limite.png" />
-    </div>
-    }
-    \fi
+    \fig{250}{limite.png}
     taking
     $$
     \lim_{\tau\rightarrow0}h_\tau(t) = \delta(t).
@@ -757,17 +715,7 @@ then the spectrum tends to become a constant function.
     \label{eq:TFdelta}
   \end{equation}
   graphically:
-  \ifx\HCode\Undfef
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{delta_1}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="250" src="data/delta_1.png" />
-    </div>
-  }
-  \fi
+  \fig{250}{delta_1.png}
 \end{itemize}
 \subsection*{Proof}
 By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
@@ -789,17 +737,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
     \label{eq:TFfc}
   \end{equation}
   Graphically:
-  \ifx\HCode\Undfef
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{1_delta}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="250" src="data/1_delta.png" />
-    </div>
-  }
-  \fi
+  \fig{250}{1_delta.png}
 \end{itemize}
 
 \subsection*{Proof}
@@ -841,18 +779,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
     \label{eq:FTCE}
   \end{equation}
 \item Graphically:
-  \ifx\HCode\Undfef
-  \begin{center}
-    %\texfigure{0.6\textwidth}{!}{TFexpo}
-    \includegraphics[width=0.6\textwidth]{TFexpo}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="200" src="data/TFexpo.png" />
-    </div>
-  }
-  \fi
+  \fig{200}{TFexpo.png}
 \end{itemize}
 
 \subsection*{Proof}
@@ -878,18 +805,7 @@ $\omega=\omega-\omega_0$ we get that
     \label{eq:TFsen}
   \end{equation}
   Graphically:
-  \ifx\HCode\Undfef
-  \begin{center}
-    %\texfigure{0.9\textwidth}{!}{TFseno}
-    \includegraphics[width=0.9\textwidth]{TFseno}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="200" src="data/TFseno.png" />
-    </div>
-  }
-  \fi
+  \fig{200}{TFseno.png}
 \end{itemize}
 
 \subsection*{Proof}
@@ -918,18 +834,7 @@ Therefore (see \ref{eq:FTCE}),
     \label{eq:FtCos}
   \end{equation}
   Graphically:
-  \ifx\HCode\Undfef
-  \begin{center}
-    %\    texfigure{0.9\textwidth}{!}{TFcoseno}
-    \includegraphics[width=0.9\textwidth]{TFcoseno}
-  \end{center}
-  \else
-  \HCode{
-    <div style="text-align:center;">
-    <img height="200" src="data/TFcoseno.png" />
-    </div>
-  }
-  \fi
+  \fig{200}{TFcoseno.png}
 \end{itemize}
 
 \subsection*{Proof}
@@ -975,18 +880,7 @@ Therefore (see \ref{eq:FTCE}),
 
 \item Graphically, for the case of the rectangular function:
 \end{itemize}
-\ifx\HCode\Undfef
-\begin{center}
-  %\texfigure{\textwidth}{!}{TFfuncion_periodica}
-  \includegraphics[width=\textwidth]{TFfuncion_periodica}
-\end{center}
-\else
-\HCode{
-  <div style="text-align:center;">
-  <img height="500" src="data/TFfuncion_periodica.png" />
-  </div>
-}
-\fi
+\fig{500}{TFfuncion_periodica.png}
 
 \section{Fourier transform of an impulse train function}
 \begin{itemize}
@@ -1008,18 +902,7 @@ Therefore (see \ref{eq:FTCE}),
     \label{eq:TF_delta_T}
   \end{equation}
 \end{itemize}
-\ifx\HCode\Undfef
-\begin{center}
-  %\texfigure{\textwidth}{!}{TFtren_de_impulsos}
-  \includegraphics[width=\textwidth]{TFtren_de_impulsos}
-\end{center}
-\else
-\HCode{
-  <div style="text-align:center;">
-  <img height="500" src="data/TFtren_de_impulsos.png" />
-  </div>
-}
-\fi
+\fig{300}{TFtren_de_impulsos.png}
 \begin{itemize}
 \item Note that as $T$ increases the spectrum becomes denser and its
   amplitude decreases.
@@ -1158,10 +1041,7 @@ $$
 \end{itemize}
 
 \subsection*{Example}
-\begin{center}
-  %\texfigure{!}{7cm}{ejemplo_convolucion}
-  \includegraphics[height=7cm]{ejemplo_convolucion}
-\end{center}
+\fig{400}{ejemplo_convolucion.png}
 \begin{itemize}
 \item The convolution of two functions $f_1(t)$ and $f_2(t)$ is
   calculated for the different values of $t$ that shifts to
@@ -1170,46 +1050,39 @@ $$
   \begin{enumerate}
     \item If $t<0$ we get that:
       \begin{center}
-        %\texfigure{!}{!}{caso1}
-        \includegraphics[width=8cm]{caso1}
+        \fig{200}{caso1.png}
       \end{center}
       and as can be seen, there is no overlap, that is,
       $f_1(\tau)f_2(t-\tau)=0$.
     \item If $t=0$:
       \begin{center}
-        %\texfigure{!}{!}{caso2}
-        \includegraphics[width=8cm]{caso2}
+        \fig{200}{caso2.png}
       \end{center}
       overlapping begins to exist.
     \item If $t=1/2$:
       \begin{center}
-        %\texfigure{!}{!}{caso3}
-        \includegraphics[width=8cm]{caso3}
+        \fig{200}{caso3.png}
       \end{center}
       the overlap area is 1/4.
     \item If $t=1$:
       \begin{center}
-        %\texfigure{!}{!}{caso4}
-        \includegraphics[width=8cm]{caso4}
+        \fig{200}{caso4.png}
       \end{center}
       the area is 1/2.
     \item If $t=3/4$:
       \begin{center}
-        %\texfigure{!}{!}{caso5}
-        \includegraphics[width=8cm]{caso5}
+        \fig{200}{caso5.png}
       \end{center}
       the overlap area is 1/4.
     \item If $t=2$:
       \begin{center}
-        %\texfigure{!}{!}{caso6}
-        \includegraphics[width=8cm]{caso6}
+        \fig{200}{caso6.png}
       \end{center}
       the overlap area is again 0.
   \end{enumerate}
 \item Therefore:
   \begin{center}
-    %\texfigure{!}{!}{final}
-    \includegraphics[width=8cm]{final}
+    \fig{200}{final.png}
   \end{center}
 \end{itemize}
 
