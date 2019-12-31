@@ -572,7 +572,7 @@ Finally, joining the two summations and the term that was left out we have to
   %  \end{array}
   %\right.
   %$$
-  \fig{200}{cuadrada.png}
+  \svgfig{graphics/cuadrada}{6cm}{600}
   Determine its Fuorier spectrum.
 %\item [] Antes de aplicar la Ecuaci\'on \ref{eq:Fw} que calcula la
 %  transformada (directa) de Fourier, vamos a realizar un cambio de
@@ -631,7 +631,7 @@ Finally, joining the two summations and the term that was left out we have to
   
 \end{itemize}
 
-\fig{350}{funcion_muestreo_small.png}
+\svgfig{graphics/funcion_muestreo}{8cm}{800}
 
 \noindent Notice that if if $\tau\rightarrow \infty$ then the spectrum
 tends to become an impulse at $\omega=0$ and if $\tau\rightarrow 0$
@@ -642,7 +642,7 @@ then the spectrum tends to become a constant function.
 \item The unit impulse function \cite{Lathi} plays a determining role
   in the theory of signal communication and in particular in the
   sampling theorem. It is defined as:
-  \fig{200}{delta.png}
+  \svgfig{graphics/delta}{5cm}{500}
   and it fulfills that
   \begin{equation}
     \left\{
@@ -687,7 +687,7 @@ then the spectrum tends to become a constant function.
   generate and that is obtained in the limit of other functions:
   \begin{enumerate}
   \item From a rectangular function:
-    \fig{250}{limite.png}
+    \svgfig{graphics/limite}{6cm}{600}
     taking
     $$
     \lim_{\tau\rightarrow0}h_\tau(t) = \delta(t).
@@ -714,8 +714,8 @@ then the spectrum tends to become a constant function.
     \tag{FT$\delta$}
     \label{eq:TFdelta}
   \end{equation}
-  graphically:
-  \fig{250}{delta_1.png}
+  Graphically:
+  \svgfig{graphics/delta_1}{10cm}{1000}
 \end{itemize}
 
 \subsection*{Proof}
@@ -738,7 +738,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
     \label{eq:TFfc}
   \end{equation}
   Graphically:
-  \fig{250}{1_delta.png}
+  \svgfig{graphics/1_delta}{10cm}{1000}
 \end{itemize}
 
 \subsection*{Proof}
@@ -779,7 +779,7 @@ By de fi nition of the Fourier transform (see Equation \ref{eq:Ft}) one has to:
     \label{eq:FTCE}
   \end{equation}
 \item Graphically:
-  \fig{200}{TFexpo.png}
+  \svgfig{graphics/TFexpo}{6cm}{600}
 \end{itemize}
 
 \subsection*{Proof 1}
@@ -836,7 +836,7 @@ The first part of this equation is the Fourier Transform of ${\cal F}(e^{j\omega
     \label{eq:TFsen}
   \end{equation}
   Graphically:
-  \fig{200}{TFseno.png}
+  \svgfig{graphics/TFseno}{10cm}{1000}
 \end{itemize}
 
 \subsection*{Proof}
@@ -867,7 +867,7 @@ Therefore (see \ref{eq:FTCE}),
     \label{eq:FtCos}
   \end{equation}
   Graphically:
-  \fig{200}{TFcoseno.png}
+  \svgfig{graphics/TFcoseno}{10cm}{1000}
 \end{itemize}
 
 \subsection*{Proof}
@@ -913,7 +913,7 @@ Therefore (see \ref{eq:FTCE}),
 
 \item Graphically, for the case of the rectangular function:
 \end{itemize}
-\fig{500}{TFfuncion_periodica.png}
+\svgfig{graphics/TFfuncion_periodica}{10cm}{1000}
 
 \section{Fourier transform of an impulse train function}
 \begin{itemize}
@@ -935,7 +935,7 @@ Therefore (see \ref{eq:FTCE}),
     \label{eq:TF_delta_T}
   \end{equation}
 \end{itemize}
-\fig{300}{TFtren_de_impulsos.png}
+\svgfig{graphics/TFtren_de_impulsos}{10cm}{1000}
 \begin{itemize}
 \item Note that as $T$ increases the spectrum becomes denser and its
   amplitude decreases.
@@ -1074,7 +1074,7 @@ $$
 \end{itemize}
 
 \subsection*{Example}
-\fig{400}{ejemplo_convolucion.png}
+\svgfig{graphics/ejemplo_convolucion}{8cm}{800}
 \begin{itemize}
 \item The convolution of two functions $f_1(t)$ and $f_2(t)$ is
   calculated for the different values of $t$ that shifts to
@@ -1083,39 +1083,39 @@ $$
   \begin{enumerate}
     \item If $t<0$ we get that:
       \begin{center}
-        \fig{200}{caso1.png}
+        \svgfig{graphics/caso1}{6cm}{600}
       \end{center}
       and as can be seen, there is no overlap, that is,
       $f_1(\tau)f_2(t-\tau)=0$.
     \item If $t=0$:
       \begin{center}
-        \fig{200}{caso2.png}
+        \svgfig{graphics/caso2}{6cm}{600}
       \end{center}
       overlapping begins to exist.
     \item If $t=1/2$:
       \begin{center}
-        \fig{200}{caso3.png}
+        \svgfig{graphics/caso3}{6cm}{600}
       \end{center}
       the overlap area is 1/4.
     \item If $t=1$:
       \begin{center}
-        \fig{200}{caso4.png}
+        \svgfig{graphics/caso4}{6cm}{600}
       \end{center}
       the area is 1/2.
     \item If $t=3/4$:
       \begin{center}
-        \fig{200}{caso5.png}
+        \svgfig{graphics/caso5}{6cm}{600}
       \end{center}
       the overlap area is 1/4.
     \item If $t=2$:
       \begin{center}
-        \fig{200}{caso6.png}
+        \svgfig{graphics/caso6}{6cm}{600}
       \end{center}
       the overlap area is again 0.
   \end{enumerate}
 \item Therefore:
   \begin{center}
-    \fig{200}{final.png}
+    \svgfig{graphics/final}{6cm}{600}
   \end{center}
 \end{itemize}
 
@@ -1271,5 +1271,5 @@ Using the theorem of convolution in the time domain (Eq.
   \end{array}
 \end{equation*}
 
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
 \bibliography{signal-processing}
