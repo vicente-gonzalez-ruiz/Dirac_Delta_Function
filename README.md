@@ -1,1 +1,3 @@
-[Click me](https://cdn.rawgit.com/vicente-gonzalez-ruiz/harmonic_analysis/master/index.html).
+Harmonic Analysis for Signals
+
+[Click me](https://vicente-gonzalez-ruiz.github.io/harmonic_analysis).
